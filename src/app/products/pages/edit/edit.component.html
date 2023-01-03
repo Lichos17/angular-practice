@@ -1,0 +1,57 @@
+<main class="products-create">
+  <form class="form">
+    <mat-form-field class="input-field">
+      <mat-label>Name</mat-label>
+      <input
+        name="name"
+        [(ngModel)]="product.name"
+        matInput
+        required
+        type="text"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-field">
+      <mat-label>Description</mat-label>
+      <input
+        name="description"
+        [(ngModel)]="product.description"
+        matInput
+        required
+        type="text"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-field">
+      <mat-label>Category</mat-label>
+      <mat-select matInput [(ngModel)]="product.category" required>
+        <mat-option
+          *ngFor="let category of productCategories"
+          value="category"
+          >{{ category }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="input-field">
+      <mat-label>Price</mat-label>
+      <input
+        name="price"
+        [(ngModel)]="product.price"
+        matInput
+        required
+        type="text"
+      />
+    </mat-form-field>
+
+    <button
+      class="button"
+      (click)="updateProduct()"
+      mat-raised-button
+      color="primary"
+    >
+      <mat-icon>edit</mat-icon>
+      Guardar
+    </button>
+  </form>
+</main>

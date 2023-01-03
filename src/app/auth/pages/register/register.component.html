@@ -1,0 +1,57 @@
+<main class="login">
+  <form class="form" class="example-form">
+    <mat-form-field class="input-field">
+      <mat-label>Name</mat-label>
+      <input
+        name="name"
+        [(ngModel)]="form.name"
+        matInput
+        required
+        type="text"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-field">
+      <mat-label>Email</mat-label>
+      <input
+        name="email"
+        [(ngModel)]="form.email"
+        matInput
+        required
+        type="text"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-field">
+      <mat-label>Password</mat-label>
+      <input
+        name="password"
+        [(ngModel)]="form.password"
+        matInput
+        required
+        type="password"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-field">
+      <mat-label>Password Confirm</mat-label>
+      <input
+        name="password"
+        [(ngModel)]="form.passwordConfirm"
+        matInput
+        required
+        type="password"
+      />
+    </mat-form-field>
+
+    <button
+      class="button"
+      (click)="doRegister()"
+      mat-raised-button
+      color="primary"
+    >
+      <mat-icon>edit</mat-icon>
+      Guardar
+    </button>
+  </form>
+</main>
